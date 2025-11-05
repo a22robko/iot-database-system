@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>IOTProject</title>
+  <link rel="stylesheet" href="biljett.css" />
+  <script defer src="Biljett.js?v=3"></script>
+
+  <script defer src="Biljett.js"></script>
+</head>
+<body>
+  <div class="page">
+    <header class="header">
+      <h1>IOT Projekt</h1>
+      <nav class="tabs">
+        <button class="tab active" data-target="#biljett"> Biljetter</button>
+      </nav>
+    </header>
+
+    <!-- BILJETTER -->
+    <section id="biljett" class="panel active">
+      <div class="card">
+        <h2 class="card-title">Register Ticket</h2>
+
+        <form id="biljettForm" class="form-grid">
+          <div class="form-field">
+            <label for="fornamn">Name</label>
+            <input id="fornamn" type="text" placeholder="Robin" />
+          </div>
+          <div class="form-field">
+            <label for="efternamn">Surename</label>
+            <input id="efternamn" type="text" placeholder="Andersson" />
+          </div>
+          <div class="form-field">
+            <label for="alder">Age</label>
+            <input id="alder" type="number" min="0" placeholder="26" />
+          </div>
+          <div class="form-field">
+            <label for="langd">Length (cm)</label>
+            <input id="langd" type="number" min="0" placeholder="183" />
+          </div>
+
+          <div class="actions">
+            <button class="btn primary" type="submit"> Add</button>
+            <button class="btn" id="exportCsv" type="button"> Export CSV</button>
+            <button class="btn" id="saveServer" type="button">Save (server)</button>
+            <button class="btn subtle" id="clearLocal" type="button">Clean</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="card">
+        <h3 class="card-title">Register Ticket</h3>
+        <div class="table-wrap">
+          <table id="biljettTable">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Surename</th>
+                <th>Age</th>
+                <th>Length</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

@@ -1,0 +1,211 @@
+/* === Grundlayout === */
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background-color: #fafafa;
+  color: #222;
+  margin: 0;
+  padding: 0;
+}
+
+.page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* === Header & navigation === */
+.header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #222;
+}
+
+.tabs {
+  margin-bottom: 1.5rem;
+}
+
+.tab {
+  background: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 8px 16px;
+  margin-right: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+}
+
+.tab:hover {
+  background: #f0f0f0;
+}
+
+.tab.active {
+  background: #e7f1ff;
+  border-color: #99c1ff;
+  color: #004aad;
+}
+
+/* === Kort & innehåll === */
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  margin-bottom: 24px;
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.card:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.07);
+}
+
+.card-title {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 1.2rem;
+  color: #333;
+  border-left: 4px solid #99c1ff;
+  padding-left: 8px;
+}
+
+.form-grid {
+  display: grid;
+  gap: 12px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-field label {
+  font-size: 0.9rem;
+  margin-bottom: 4px;
+  color: #444;
+}
+
+input {
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #fdfdfd;
+}
+
+input:focus {
+  outline: none;
+  border-color: #99c1ff;
+  background-color: #fff;
+  box-shadow: 0 0 3px rgba(153, 193, 255, 0.5);
+}
+
+/* === Knappdesign === */
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.btn {
+  border: none;
+  padding: 9px 15px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.btn.primary {
+  background-color: #4a8eff;
+  color: #fff;
+}
+
+.btn.danger {
+  background-color: #ff6b6b;
+  color: white;
+}
+
+.btn.subtle {
+  background-color: #efefef;
+  color: #333;
+}
+
+/* === Tabell === */
+.table-wrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+}
+
+th, td {
+  padding: 10px 8px;
+  border-bottom: 1px solid #e5e5e5;
+  text-align: left;
+}
+
+th {
+  background-color: #f3f6fa;
+  color: #333;
+  font-weight: 600;
+}
+
+tr:hover {
+  background-color: #f9fbff;
+}
+
+/* === Tic Tac Toe === */
+.ttt-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 90px);
+  grid-template-rows: repeat(3, 90px);
+  gap: 6px;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.ttt-cell {
+  width: 90px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.2rem;
+  border-radius: 10px;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);
+  transition: background 0.2s;
+}
+
+.ttt-cell:hover {
+  background-color: #f0f6ff;
+}
+
+.ttt-cell.win {
+  background-color: #d8fdd8;
+  border-color: #6fc36f;
+}
+
+.status {
+  text-align: center;
+  margin-top: 12px;
+  font-weight: 500;
+  color: #333;
+}
+
+/* === Footer === */
+.footer {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #777;
+  margin-top: 40px;
+}
